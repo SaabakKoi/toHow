@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">NewGekBrains#1</string>
+    <string name="_0">0</string>
+    <string name="_1_x">1/x</string>
+    <string name="x2">x2</string>
+    <string name="f">+/-</string>
+    <string name="h">,</string>
+    <string name="q"><![CDATA[<]]></string>
+    <string name="o">%</string>
+    <string name="ce">ce</string>
+    <string name="c">c</string>
+    <string name="po">/</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_10">0</string>
+    <string name="_00">=</string>
+    <string name="_pop">+</string>
+    <string name="_pu">-</string>
+    <string name="x">x</string>
 </resources>

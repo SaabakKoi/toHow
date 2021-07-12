@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    tools:context=".MainActivity">>
+    tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,10 +28,12 @@
         android:layout_gravity="center"
         android:layout_marginBottom="1dp"
         android:backgroundTint="#448AFF"
-        android:text="1"
+        android:text="@string/_1"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button2"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button2">
+
+    </Button>
 
     <Button
         android:id="@+id/button2"
@@ -41,10 +43,12 @@
         android:layout_gravity="center"
         android:layout_marginBottom="1dp"
         android:backgroundTint="#448AFF"
-        android:text="2"
+        android:text="@string/_2"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toStartOf="@+id/button3"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button3">
+
+    </Button>
 
     <Button
         android:id="@+id/button3"
@@ -54,10 +58,12 @@
         android:layout_gravity="center"
         android:layout_marginBottom="1dp"
         android:backgroundTint="#448AFF"
-        android:text="3"
+        android:text="@string/_3"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toStartOf="@+id/button12"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button12">
+
+    </Button>
 
     <Button
         android:id="@+id/button4"
@@ -66,10 +72,13 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="4"
+        android:text="@string/_4"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/button5"
-        tools:layout_editor_absoluteY="280dp"></Button>
+        tools:layout_editor_absoluteY="280dp"
+        tools:ignore="MissingConstraints">
+
+    </Button>
 
     <Button
         android:id="@+id/button5"
@@ -78,10 +87,13 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="5"
+        android:text="@string/_5"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/button6"
-        tools:layout_editor_absoluteY="280dp"></Button>
+        tools:layout_editor_absoluteY="280dp"
+        tools:ignore="MissingConstraints">
+
+    </Button>
 
     <Button
         android:id="@+id/button6"
@@ -90,10 +102,13 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="6"
+        android:text="@string/_6"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/button13"
-        tools:layout_editor_absoluteY="280dp"></Button>
+        tools:layout_editor_absoluteY="280dp"
+        tools:ignore="MissingConstraints">
+
+    </Button>
 
     <Button
         android:id="@+id/button7"
@@ -102,10 +117,13 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="7"
+        android:text="@string/_7"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/button8"
-        tools:layout_editor_absoluteY="380dp"></Button>
+        tools:layout_editor_absoluteY="380dp"
+        tools:ignore="MissingConstraints">
+
+    </Button>
 
     <Button
         android:id="@+id/button8"
@@ -114,10 +132,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="8"
+        android:text="@string/_8"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/button9"
-        tools:layout_editor_absoluteY="380dp"></Button>
+        tools:layout_editor_absoluteY="380dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button9"
@@ -126,10 +146,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="9"
+        android:text="@string/_9"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/button14"
-        tools:layout_editor_absoluteY="380dp"></Button>
+        tools:layout_editor_absoluteY="380dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button10"
@@ -138,10 +160,13 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="0"
+        android:text="@string/_0"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button23"
-        app:layout_constraintEnd_toStartOf="@+id/button20"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button20">
+
+
+    </Button>
 
     <Button
         android:id="@+id/button11"
@@ -150,10 +175,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="="
+        android:text="@string/_00"
         android:textSize="50sp"
         tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="580dp"></Button>
+        tools:layout_editor_absoluteY="580dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button12"
@@ -162,10 +189,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="+"
+        android:text="@string/_pop"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button13"
-        tools:layout_editor_absoluteX="306dp"></Button>
+        tools:layout_editor_absoluteX="306dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button13"
@@ -175,10 +204,12 @@
         android:layout_gravity="center"
         android:layout_marginBottom="1dp"
         android:backgroundTint="#448AFF"
-        android:text="-"
+        android:text="@string/_pu"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button14"
-        tools:layout_editor_absoluteX="306dp"></Button>
+        tools:layout_editor_absoluteX="306dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button14"
@@ -187,10 +218,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="x"
+        android:text="@string/x"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button15"
-        tools:layout_editor_absoluteX="306dp"></Button>
+        tools:layout_editor_absoluteX="306dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button15"
@@ -199,10 +232,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="/"
+        android:text="@string/po"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button11"
-        tools:layout_editor_absoluteX="306dp"></Button>
+        tools:layout_editor_absoluteX="306dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button16"
@@ -211,10 +246,12 @@
         android:layout_height="75sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="c"
+        android:text="@string/c"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintEnd_toStartOf="@+id/button17"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button17">
+
+    </Button>
 
     <Button
         android:id="@+id/button17"
@@ -223,10 +260,12 @@
         android:layout_height="75sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="ce"
+        android:text="@string/ce"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button18"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button18">
+
+    </Button>
 
     <Button
         android:id="@+id/button18"
@@ -235,10 +274,12 @@
         android:layout_height="75sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="%"
+        android:text="@string/o"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button19"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button19">
+
+    </Button>
 
     <Button
         android:id="@+id/button19"
@@ -247,10 +288,12 @@
         android:layout_height="75sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="<"
+        android:text="@string/q"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/button12"
-        tools:layout_editor_absoluteX="306dp"></Button>
+        tools:layout_editor_absoluteX="306dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button20"
@@ -259,10 +302,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text=","
+        android:text="@string/h"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/button11"
-        app:layout_constraintEnd_toStartOf="@+id/button15"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button15">
+
+    </Button>
 
     <Button
         android:id="@+id/button21"
@@ -271,10 +316,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="+/-"
+        android:text="@string/f"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/button22"
-        app:layout_constraintEnd_toStartOf="@+id/button10"></Button>
+        app:layout_constraintEnd_toStartOf="@+id/button10">
+
+    </Button>
 
     <Button
         android:id="@+id/button22"
@@ -283,10 +330,12 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="x2"
+        android:text="@string/x2"
         android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@+id/button23"
-        tools:layout_editor_absoluteY="580dp"></Button>
+        tools:layout_editor_absoluteY="580dp">
+
+    </Button>
 
     <Button
         android:id="@+id/button23"
@@ -295,20 +344,23 @@
         android:layout_height="100sp"
         android:layout_gravity="center"
         android:backgroundTint="#448AFF"
-        android:text="1/x"
+        android:text="@string/_1_x"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/button11"
-        tools:layout_editor_absoluteY="580dp"></Button>
+        tools:layout_editor_absoluteY="580dp">
+
+    </Button>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="100sp"
-        android:text="0"
+        android:text="@string/_0"
         android:textSize="60sp"
         android:textStyle="bold"
         android:gravity="end"
         android:paddingEnd="12sp"
+        android:paddingStart="@dimen/material_emphasis_disabled"
         tools:layout_editor_absoluteX="-5dp"
         tools:layout_editor_absoluteY="4dp" />
 
