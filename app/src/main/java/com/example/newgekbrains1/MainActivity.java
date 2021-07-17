@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 GettingRes();
                 NUMBERS.setText(String.valueOf(""));
                 list.clear();
+                listWithSymbols.clear();
 
             }
         });
@@ -116,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
         Calculate();
-        RESULT.setText(String.valueOf(list.get(0)));
 
     }
 
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     if(listWithSymbols.size()>1) {
                         list.remove(i - 1);
                     }
-                    listWithSymbols.remove(i);
+                    listWithSymbols.remove(i-1);
 
                 } else if (listWithSymbols.get(i) == 4) {
                     RESULT.setText(String.valueOf(list.get(i) / list.get(i++)));
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                     if(listWithSymbols.size()>1) {
                         list.remove(i - 1);
                     }
-                    listWithSymbols.remove(i);
+                    listWithSymbols.remove(i-1);
                 } else if (listWithSymbols.get(i) == 1) {
                     RESULT.setText(String.valueOf(list.get(i) + list.get(i++)));
                     list.set(i, Integer.parseInt(RESULT.getText().toString()));
@@ -147,15 +147,15 @@ public class MainActivity extends AppCompatActivity {
                     if(listWithSymbols.size()>1) {
                         list.remove(i - 1);
                     }
-                    listWithSymbols.remove(i);
+                    listWithSymbols.remove(i-1);
                 } else if (listWithSymbols.get(i) == 2) {
                     RESULT.setText(String.valueOf(list.get(i) - list.get(i++)));
                     list.set(i, Integer.parseInt(RESULT.getText().toString()));
-                    RESULT.setText(String.valueOf(list));
+//                    RESULT.setText(String.valueOf(list));
                     if(listWithSymbols.size()>1) {
                         list.remove(i - 1);
                     }
-                    listWithSymbols.remove(i);
+                    listWithSymbols.remove(i-1);
                 }
                 else {
                     break;
@@ -164,36 +164,40 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-
+    try {
         if (listWithSymbols.get(0) == 3) {
             try {
                 RESULT.setText(String.valueOf(list.get(0) * list.get(1)));
                 list.set(0, Integer.parseInt(RESULT.getText().toString()));
-            } catch (IndexOutOfBoundsException e){
+            } catch (IndexOutOfBoundsException e) {
 
             }
         } else if (listWithSymbols.get(0) == 4) {
             try {
                 RESULT.setText(String.valueOf(list.get(0) / list.get(1)));
                 list.set(0, Integer.parseInt(RESULT.getText().toString()));
-            } catch (IndexOutOfBoundsException e){
+            } catch (IndexOutOfBoundsException e) {
 
             }
         } else if (listWithSymbols.get(0) == 1) {
             try {
                 RESULT.setText(String.valueOf(list.get(0) + list.get(1)));
-                list.set(0, Integer.parseInt(RESULT.getText().toString()));
-            }catch (IndexOutOfBoundsException e){
+                list.add(0,Integer.parseInt(RESULT.getText().toString()));
+            } catch (IndexOutOfBoundsException e) {
 
             }
         } else if (listWithSymbols.get(0) == 2) {
             try {
                 RESULT.setText(String.valueOf(list.get(0) - list.get(1)));
                 list.set(0, Integer.parseInt(RESULT.getText().toString()));
-            }catch (IndexOutOfBoundsException e){
+            } catch (IndexOutOfBoundsException e) {
 
             }
         }
+    }catch (IndexOutOfBoundsException e){
+
+    }
+        RESULT.setText(String.valueOf(list.get(0)));
     }
 
 }
