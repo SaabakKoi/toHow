@@ -1,5 +1,6 @@
 package com.example.newgekbrains1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         NUMBERS = findViewById(R.id.numbers1);
         NUMBERS2 = findViewById(R.id.numbers2);
         RESULT = findViewById(R.id.result);
+
+
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,78 +125,84 @@ public class MainActivity extends AppCompatActivity {
 
     public void Calculate() {
         if (listWithSymbols.size() > 1) {
-            for (int i = 0; i < listWithSymbols.size(); i++) {
-                if (listWithSymbols.get(i) == 3) {
-                    RESULT.setText(String.valueOf(list.get(i) * list.get(i++)));
-                    list.set(i, Integer.parseInt(RESULT.getText().toString()));
-                    RESULT.setText(String.valueOf(list));
-                    if(listWithSymbols.size()>1) {
-                        list.remove(i - 1);
-                    }
+            if (listWithSymbols.contains(3)) {
+                for (int i = 0; i < listWithSymbols.size(); i++) {
+                    if (listWithSymbols.get(i) == 3) {
+                        RESULT.setText(String.valueOf(list.get(i) * list.get(i++)));
+                        list.set(0, Integer.parseInt(RESULT.getText().toString()));
+                        if (listWithSymbols.size() > 1) {
+                            list.remove(i - 1);
+                        }
                     listWithSymbols.remove(i-1);
 
-                } else if (listWithSymbols.get(i) == 4) {
-                    RESULT.setText(String.valueOf(list.get(i) / list.get(i++)));
-                    list.set(i, Integer.parseInt(RESULT.getText().toString()));
-                    RESULT.setText(String.valueOf(list));
-                    if(listWithSymbols.size()>1) {
-                        list.remove(i - 1);
+                    } else if (listWithSymbols.get(i) == 4) {
+                        RESULT.setText(String.valueOf(list.get(i) / list.get(i++)));
+                        list.set(i, Integer.parseInt(RESULT.getText().toString()));
+                        RESULT.setText(String.valueOf(list));
+                        if (listWithSymbols.size() > 1) {
+                            list.remove(i - 1);
+                        }
+                        listWithSymbols.remove(i - 1);
                     }
-                    listWithSymbols.remove(i-1);
-                } else if (listWithSymbols.get(i) == 1) {
-                    RESULT.setText(String.valueOf(list.get(i) + list.get(i++)));
-                    list.set(i, Integer.parseInt(RESULT.getText().toString()));
-                    RESULT.setText(String.valueOf(list));
-                    if(listWithSymbols.size()>1) {
-                        list.remove(i - 1);
-                    }
-                    listWithSymbols.remove(i-1);
-                } else if (listWithSymbols.get(i) == 2) {
-                    RESULT.setText(String.valueOf(list.get(i) - list.get(i++)));
-                    list.set(i, Integer.parseInt(RESULT.getText().toString()));
-//                    RESULT.setText(String.valueOf(list));
-                    if(listWithSymbols.size()>1) {
-                        list.remove(i - 1);
-                    }
-                    listWithSymbols.remove(i-1);
                 }
-                else {
-                    break;
-                }
+                if (listWithSymbols.size() > 2) {
+                    for (int i = 0; i < listWithSymbols.size(); i++) {
+                        if (listWithSymbols.get(0) == 1) {
+                            RESULT.setText(String.valueOf(list.get(i) + list.get(i++)));
+                            list.set(i, Integer.parseInt(NUMBERS2.getText().toString()));
+                            RESULT.setText(String.valueOf(""));
+                            if (listWithSymbols.size() > 1) {
+                                list.remove(i-1);
+                            }
+                            listWithSymbols.remove(i - 1);
+                        } else if (listWithSymbols.get(0) == 2) {
+                            RESULT.setText(String.valueOf(list.get(i) - list.get(i++)));
+                            list.set(i, Integer.parseInt(RESULT.getText().toString()));
+                            RESULT.setText(String.valueOf(""));
+                            if (listWithSymbols.size() > 1) {
+                                list.remove(i - 1);
+                            }
+                            listWithSymbols.remove(i - 1);
+                        } else {
+                        }
+                    }
 
+                }
             }
 
         }
     try {
-        if (listWithSymbols.get(0) == 3) {
-            try {
-                RESULT.setText(String.valueOf(list.get(0) * list.get(1)));
-                list.set(0, Integer.parseInt(RESULT.getText().toString()));
-            } catch (IndexOutOfBoundsException e) {
 
-            }
-        } else if (listWithSymbols.get(0) == 4) {
-            try {
-                RESULT.setText(String.valueOf(list.get(0) / list.get(1)));
-                list.set(0, Integer.parseInt(RESULT.getText().toString()));
-            } catch (IndexOutOfBoundsException e) {
+            if (listWithSymbols.get(0) == 3) {
+                try {
+                    RESULT.setText(String.valueOf(list.get(0) * list.get(1)));
+                    list.set(0, Integer.parseInt(RESULT.getText().toString()));
+                } catch (IndexOutOfBoundsException e) {
 
-            }
-        } else if (listWithSymbols.get(0) == 1) {
-            try {
-                RESULT.setText(String.valueOf(list.get(0) + list.get(1)));
-                list.add(0,Integer.parseInt(RESULT.getText().toString()));
-            } catch (IndexOutOfBoundsException e) {
+                }
+            } else if (listWithSymbols.get(0) == 4) {
+                try {
+                    RESULT.setText(String.valueOf(list.get(0) / list.get(1)));
+                    list.set(0, Integer.parseInt(RESULT.getText().toString()));
+                } catch (IndexOutOfBoundsException e) {
 
-            }
-        } else if (listWithSymbols.get(0) == 2) {
-            try {
-                RESULT.setText(String.valueOf(list.get(0) - list.get(1)));
-                list.set(0, Integer.parseInt(RESULT.getText().toString()));
-            } catch (IndexOutOfBoundsException e) {
+                }
+            } else if (listWithSymbols.get(0) == 1) {
+                try {
+                    RESULT.setText(String.valueOf(list.get(0) + list.get(1)));
+                    list.add(0, Integer.parseInt(RESULT.getText().toString()));
+                } catch (IndexOutOfBoundsException e) {
 
+                }
+            } else if (listWithSymbols.get(0) == 2) {
+                try {
+                    RESULT.setText(String.valueOf(list.get(0) - list.get(1)));
+                    list.set(0, Integer.parseInt(RESULT.getText().toString()));
+                } catch (IndexOutOfBoundsException e) {
+
+                }
             }
-        }
+
     }catch (IndexOutOfBoundsException e){
 
     }
