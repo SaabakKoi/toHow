@@ -1,19 +1,17 @@
 package com.example.newgekbrains1;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_2 extends AppCompatActivity {
 
     private TextView ResultField;
     private EditText CalculationField;
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         ResultField = findViewById(R.id.result);
         CalculationField = findViewById(R.id.numbers1);
         HideFiled = findViewById(R.id.numbers2);
-        Buttons();
     }
 
     public void Buttons(){
@@ -166,21 +163,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        if(symbols.get(0)==1){
-            calculator.sum();
-        }
-        else if(symbols.get(0)==2){
-            calculator.sub();
-        }
-        else if(symbols.get(0)==3){
-            calculator.mul();
-        }
-        else if(symbols.get(0)==4){
-            calculator.div();
-        }
         calculator.equally(CalculationField, ResultField);
     }
-
 }
 
 

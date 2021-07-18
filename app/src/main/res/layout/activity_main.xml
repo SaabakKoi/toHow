@@ -260,12 +260,12 @@
         app:layout_constraintVertical_bias="0.158" />
 
     <EditText
-        android:id="@+id/numbers1"
+        android:id="@+id/numbers2"
         android:layout_width="match_parent"
         android:layout_height="100sp"
         android:gravity="end"
         android:paddingEnd="12sp"
-        android:textSize="75sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -274,12 +274,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
     <EditText
-        android:id="@+id/numbers2"
+        android:id="@+id/numbers1"
         android:layout_width="match_parent"
         android:layout_height="100sp"
         android:gravity="end"
         android:paddingEnd="12sp"
-        android:textSize="75sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
