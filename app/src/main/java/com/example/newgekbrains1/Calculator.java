@@ -3,10 +3,11 @@ package com.example.newgekbrains1;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Calculator {
+public class Calculator implements Serializable {
     List <Integer> listWNum;
     List <Integer> listWSym;
 
@@ -22,7 +23,6 @@ public class Calculator {
                 int a = listWNum.get(i)+listWNum.get(i+1);
                 listWNum.set(i, a);
                 listWNum.remove(i+1);
-                listWSym.remove(i);
                     break;
             }
         }
@@ -35,7 +35,6 @@ public class Calculator {
                 int a = listWNum.get(i)-listWNum.get(i+1);
                 listWNum.set(i, a);
                 listWNum.remove(i+1);
-                listWSym.remove(i);
                     break;
             }
         }
@@ -43,10 +42,11 @@ public class Calculator {
     public void mul(){
         for (int i = 0; i < listWSym.size(); i++) {
             if(listWSym.get(i)==3){
+                int a1 = listWNum.get(i);
+                int a2 = listWNum.get(i+1);
                 int a = listWNum.get(i)*listWNum.get(i+1);
                 listWNum.set(i, a);
                 listWNum.remove(i+1);
-                listWSym.remove(i);
                     break;
             }
         }
@@ -54,10 +54,11 @@ public class Calculator {
     public void div(){
         for (int i = 0; i < listWSym.size(); i++) {
             if(listWSym.get(i)==4){
+                int a1 = listWNum.get(i);
+                int a2 = listWNum.get(i+1);
                 int a = listWNum.get(i)/listWNum.get(i+1);
                 listWNum.set(i, a);
                 listWNum.remove(i+1);
-                listWSym.remove(i);
                     break;
             }
         }

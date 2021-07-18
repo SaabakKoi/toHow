@@ -15,6 +15,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Calculator calculator;
     private TextView ResultField;
     private EditText CalculationField;
     private EditText HideFiled;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     List <Integer> numbers = new ArrayList();
     List <Integer> symbols = new ArrayList();
 
+    public static final String JANGO = "JANGO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         CalculationField = findViewById(R.id.numbers1);
         HideFiled = findViewById(R.id.numbers2);
         Buttons();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(JANGO,calculator);
     }
 
     public void Buttons(){
@@ -145,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void result(){
-        Calculator calculator = new Calculator(numbers,symbols);
+        calculator = new Calculator(numbers,symbols);
         if(symbols.size()>1){
             if(symbols.contains(3) || symbols.contains(4)){
                 for (int i = 0; i < symbols.size(); i++) {
@@ -154,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
                     } else if (symbols.get(i)==4){
                         calculator.div();
                     }
+
                 }
             }
             else if(symbols.contains(1) || symbols.contains(2)){
